@@ -1,6 +1,6 @@
 import './App.css';
-import {ExamplePresenter} from "./presenter/examplePresenter";
 import {createBrowserRouter, RouterProvider} from "react-router-dom";
+import { HomePagePresenter } from './presenter/homePagePresenter';
 
 function App(props) {
 
@@ -8,7 +8,7 @@ function App(props) {
         return createBrowserRouter([
             {
                 "path": "/",
-                "element": <ExamplePresenter model={props.model}/>
+                "element": <HomePagePresenter model={props.model}/>
             },
         ]);
     }
