@@ -1,0 +1,53 @@
+.navigationBar {
+  background-color:#04315a;
+  height: 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  .the {
+    font-weight: normal;
+  }
+
+  .navTitle {
+    color: white;
+    margin: 0;
+    /* CM: note to self: maybe change this padding */
+    padding-left: 30px;
+  }
+}
+
+.buttonGroup {
+  display: flex;
+}
+
+.selector {
+  font-family: "Lato-Regular";
+  font-style: normal;
+  }
+
+.body {
+  background-color: white;
+  opacity: 90%;
+  margin: 120px 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px 70px;
+}
+
+.login {
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+}
+
+.input {
+  margin-top: 10px;
+}
+
+.button {
+  margin-top: 20px;
+}
