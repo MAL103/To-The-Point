@@ -25,7 +25,6 @@ export function AuthView(props) {
 
   return(
     <div>
-      <NavigationBar/>
       <div className="body">
         <h1 className="title">Get to The Point!</h1>
         <h2>Please log in to continue</h2>
