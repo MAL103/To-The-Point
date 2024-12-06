@@ -5,10 +5,11 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import {observable} from "mobx";
 import {model} from "./model/TTPModel";
+import { connectToFirebase } from './firebaseModel';
 
 // make model observable
 const reactiveModel = observable(model);
-
+connectToFirebase(reactiveModel);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -16,6 +17,7 @@ root.render(
     <App model={reactiveModel}/>
   </React.StrictMode>
 );
+
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))

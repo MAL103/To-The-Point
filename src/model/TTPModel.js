@@ -2,7 +2,7 @@ const model = {
     exampleData: "Hello World",
     email:"",
     password:"",
-    currentUserId:null,
+    currentUserId:undefined,
 
     setEmail(email){
         this.email=email;
