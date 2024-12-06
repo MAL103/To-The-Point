@@ -6,12 +6,6 @@ const model = {
     currentSummaryId: null,
     summaryPromiseState: {},
     currentUserPromiseState: {},
-    setCurrentUserId(userId){
-        if (userId && this.currentUserId!==userId){
-            this.currentUserId = userId;
-            resolvePromise(getUserHistory(userId),this.currentUserPromiseState);
-        }
-    },
     setCurrentSummaryId(summaryId){
         if (summaryId && this.currentSummaryId!==summaryId){
             this.currentSummaryId = summaryId;
