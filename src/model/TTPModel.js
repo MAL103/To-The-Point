@@ -6,7 +6,6 @@ const model = {
     password:"",
     searchURLs: [],
     currentSummaryId: null,
-    summaryPromiseState: {},
     setEmail(email){
         this.email=email;
     },
@@ -15,13 +14,9 @@ const model = {
     },
     setCurrentUserId(userId){
             this.currentUserId = userId;
-            //resolvePromise(getUserHistory(userId),this.currentUserPromiseState);
     },
     setCurrentSummaryId(summaryId){
-        if (summaryId && this.currentSummaryId!==summaryId){
-            this.currentSummaryId = summaryId;
-            resolvePromise(getSummaryDetails(currentUserId,summaryId),this.summaryPromiseState);
-        }
+        this.currentSummaryId = summaryId;
     },
     addURL(URLToAdd){
         this.searchURLs= [...this.searchURLs,URLToAdd];
