@@ -7,30 +7,30 @@ To The Point is an AI-powered app that summarizes news articles from a provided 
 Firebase creation\
 Firebase authentication (login, signup, logout, verify user to show page content)\
 Login and Main View\
-Sample model (to be modified)
+Sample model (to be modified)\
 
 ## What we plan to do
-API calls
-Data persistence with sample data
-Mofify Main page to add History view to the side
+API calls\
+Data persistence with sample data\
+Mofify Main page to add History view to the side\
 
 ## File structure
 ### Model
-Model with user data (email, password, uid) needed for the authentication
+Model with user data (email, password, uid) needed for the authentication\
 ### View
-LoginView - login/signup form that blocks page content
-MainPageView - where users input a url to a news article (functionality to be added)
-NavigationBarView - profile, history and logout buttons (visible after login)
+LoginView - login/signup form that blocks page content\
+MainPageView - where users input a url to a news article (functionality to be added)\
+NavigationBarView - profile, history and logout buttons (visible after login)\
 ### Presenter
-LoginPresenter - manages Firebase login and signup
-MainPagePresenter - will set the URL and manage the summary generation (to be added)
-NavigationBarPresenter - manages logout
+LoginPresenter - manages Firebase login and signup\
+MainPagePresenter - will set the URL and manage the summary generation (to be added)\
+NavigationBarPresenter - manages logout\
 ### Firebase model
-connectToFirebase - for now only manages Firebase onAuthStateChange
-will manage persistence (to be added)
+connectToFirebase - for now only manages Firebase onAuthStateChange\
+will manage persistence (to be added)\
 ### App
-router
-conditional rendering depending on whether there is a currentUserId (active user session)
+router\
+conditional rendering depending on whether there is a currentUserId (active user session)\
 
 
 # Getting Started with Create React App
