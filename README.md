@@ -1,3 +1,12 @@
+# To the Point
+
+## Project description
+
+## What we have done
+
+## What we plan to do
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
