@@ -1,4 +1,3 @@
-import { getUserHistory,getSummaryDetails} from "../userSource";
 import { resolvePromise } from "../resolvePromise";
 const model = {
     currentUserId: null,
