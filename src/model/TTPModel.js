@@ -1,5 +1,6 @@
 import { resolvePromise } from "../resolvePromise";
 const model = {
+    exampleData: "This is example data",
     currentUserId: null,
     email:"",
     password:"",
