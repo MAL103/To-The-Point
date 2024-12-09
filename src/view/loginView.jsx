@@ -6,12 +6,12 @@ export function LoginView(props) {
     <div>
       <NavigationBar/>
       <div className="body">
-      <h1 className="title">Get to The Point!</h1>
+      <h1 className="title">get to <span className="the">the</span> point</h1>
         <h2>Please log in to continue</h2>
         <form className="login">
-          <input className="input" type="text" id="username" label="username" placeholder="username"/>
-          <input className="input" type="password" id="password" label="password" placeholder="password"/>
-          <button onClick={onLoginClickACB} className="button" type="submit" label="login">Login</button>
+          <input className="loginInput" type="text" id="username" label="username" placeholder="username"/>
+          <input className="loginInput" type="password" id="password" label="password" placeholder="password"/>
+          <button onClick={onLoginClickACB} className="loginButton" type="submit" label="login">Login</button>
         </form>
       </div>
     </div>
