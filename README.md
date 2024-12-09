@@ -7,7 +7,8 @@ To The Point is an AI-powered app that summarizes news articles from a provided 
 Firebase creation\
 Firebase authentication (login, signup, logout, verify user to show page content)\
 Login and Main View\
-Sample model (to be modified)
+Sample model (to be modified)\
+API call to the OpenAI to get the summary of an article
 
 ## What we plan to do
 API calls\
