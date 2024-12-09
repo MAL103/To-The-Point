@@ -1,9 +1,11 @@
 const model = {
-    exampleData: "Hello World",
+    exampleData: "This is example data",
     email:"",
     password:"",
     currentUserId:undefined,
-
+    searchURLs: [],
+    currentSummaryId: null,
+    
     setEmail(email){
         this.email=email;
     },

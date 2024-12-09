@@ -5,6 +5,7 @@ import { app } from "../firebaseModel.js";
 
 
 const auth = getAuth(app);
+import {summarizeContent} from "../util/summarizeContent";
 
 const LoginPresenter = observer(function LoginPresenter(props){
 
@@ -55,6 +56,13 @@ const LoginPresenter = observer(function LoginPresenter(props){
   }
 
   // TO DO - connect the model and put actual data in here
+    {/*return <LoginView onEmailChange={enterEmailACB} onPasswordChange={enterPasswordACB} onLogin={loginACB} onSignup={signupACB}/>*/}
+   summarizeContent("here is some example content. Syrian Arab Republic, 2019. " +
+       "The Syrian Arab Republic is a country in Western Asia, bordering Lebanon, Turkey, Iraq, Jordan").then((data) => {
+           console.log(data);
+       }
+   );
+
     return <LoginView onEmailChange={enterEmailACB} onPasswordChange={enterPasswordACB} onLogin={loginACB} onSignup={signupACB}/>
 })
 

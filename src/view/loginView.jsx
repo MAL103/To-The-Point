@@ -23,13 +23,13 @@ export function LoginView(props) {
   return(
     <div>
       <div className="body">
-      <h1 className="title">Get to The Point!</h1>
+      <h1 className="title">get to <span className="the">the</span> point</h1>
         <h2>Please log in to continue</h2>
         <form className="login">
-          <input onChange={handlerEmailACB} className="input" type="text" id="email" label="email" placeholder="email"/>
-          <input onChange={handlerPasswordACB} className="input" type="password" id="password" label="password" placeholder="password"/>
-          <button onClick={onLoginClickACB} className="button" type="submit" label="login">Login</button>
-          <button onClick={onSignupClickACB} className="button" type="submit" label="login">Signup</button>
+          <input onChange={handlerEmailACB} className="loginInput" type="text" id="username" label="username" placeholder="email"/>
+          <input onChange={handlerPasswordACB} className="loginInput" type="password" id="password" label="password" placeholder="password"/>
+          <button onClick={onLoginClickACB} className="loginButton" type="submit" label="login">Login</button>
+          <button onClick={onSignupClickACB} className="loginButton" type="submit" label="login">Signup</button>
         </form>
       </div>
     </div>
