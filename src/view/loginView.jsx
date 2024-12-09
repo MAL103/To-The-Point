@@ -11,7 +11,7 @@ export function LoginView(props) {
         <form className="login">
           <input className="loginInput" type="text" id="username" label="username" placeholder="username"/>
           <input className="loginInput" type="password" id="password" label="password" placeholder="password"/>
-          <button onClick={onLoginClickACB} className="button" type="submit" label="login">Login</button>
+          <button onClick={onLoginClickACB} className="loginButton" type="submit" label="login">Login</button>
         </form>
       </div>
     </div>
