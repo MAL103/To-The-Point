@@ -9,8 +9,8 @@ export function LoginView(props) {
       <h1 className="title">Get to The Point!</h1>
         <h2>Please log in to continue</h2>
         <form className="login">
-          <input className="input" type="text" id="username" label="username" placeholder="username"/>
-          <input className="input" type="password" id="password" label="password" placeholder="password"/>
+          <input className="loginInput" type="text" id="username" label="username" placeholder="username"/>
+          <input className="loginInput" type="password" id="password" label="password" placeholder="password"/>
           <button onClick={onLoginClickACB} className="button" type="submit" label="login">Login</button>
         </form>
       </div>
