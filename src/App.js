@@ -29,7 +29,7 @@ const App = observer ( //JA: added the observer
         //JA: the login-content renderization
         function noUserSessionRenderer(){
             if(props.model.currentUserId === undefined){    //this is not working and i have to ask
-                return <img src="https://brfenergi.se/iprog/loading.gif"/>
+                return <img src="https://brfenergi.se/iprog/loading.gif" alt="loading img"/>
             } 
             if(props.model.currentUserId === null){     //if no user yet
                 return <LoginPresenter model={props.model}/>

@@ -1,4 +1,3 @@
-import { NavigationBar } from "./navigationBarView"
 import "../style.css"
 
 export function HomePageView(props) {

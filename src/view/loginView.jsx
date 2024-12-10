@@ -1,5 +1,4 @@
 import "../style.css"
-import { NavigationBar } from "./navigationBarView"
 
 export function LoginView(props) {
 
