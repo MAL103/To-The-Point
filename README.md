@@ -1,4 +1,7 @@
 # To the Point
+## To test
+Email: test@gmail.com\
+Password: testpassword
 
 ## Project description
 To The Point is an AI-powered app that summarizes news articles from a provided URL, removing unnecessary details to enhance readability and comprehension. It allows users to quickly grasp the main points of an article without the need to read it in full. The app includes user authentication, enabling users to securely store their article summaries on their history page for easy access and review of previous summaries.
