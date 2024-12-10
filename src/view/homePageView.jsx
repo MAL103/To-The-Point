@@ -4,7 +4,6 @@ import "../style.css"
 export function HomePageView(props) {
   return(
     <div>
-      <NavigationBar/>
       <div className="body">
         <h1 className="title">get to <span className="the">the</span> point</h1>
         <h2>Get the key concepts of your news articles</h2>

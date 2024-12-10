@@ -1,10 +1,11 @@
 const model = {
     exampleData: "This is example data",
-    currentUserId: null,
     email:"",
     password:"",
+    currentUserId:undefined,
     searchURLs: [],
     currentSummaryId: null,
+    
     setEmail(email){
         this.email=email;
     },
@@ -13,18 +14,7 @@ const model = {
     },
     setCurrentUserId(userId){
             this.currentUserId = userId;
-    },
-    setCurrentSummaryId(summaryId){
-        this.currentSummaryId = summaryId;
-    },
-    addURL(URLToAdd){
-        this.searchURLs= [...this.searchURLs,URLToAdd];
-    },
-    removeURL(URLToRemove){
-        function shouldWeKeepURLCB(URL){
-            return URLToRemove !== URL;
-        }
-        this.searchURLs = this.searchURLs.filter(shouldWeKeepURLCB);
+            //resolvePromise(getUserHistory(userId),this.currentUserPromiseState);
     }
 }
 
