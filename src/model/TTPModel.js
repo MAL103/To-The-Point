@@ -4,7 +4,8 @@ const model = {
     password:"",
     currentUserId:undefined,
     searchURLs: [],
-    currentSummaryId: null,
+    currentSummaryId: 1,
+    summaries: [],
     
     setEmail(email){
         this.email=email;
@@ -13,8 +14,17 @@ const model = {
         this.password=password;
     },
     setCurrentUserId(userId){
-            this.currentUserId = userId;
-            //resolvePromise(getUserHistory(userId),this.currentUserPromiseState);
+        this.currentUserId = userId;
+        //resolvePromise(getUserHistory(userId),this.currentUserPromiseState);
+    },
+    setCurrentSummaryId(summaryId){
+        this.currentSummaryId= summaryId;
+    },
+    setSummaries(summaries) {
+        this.summaries = summaries.map((summary) => ({
+          summary: summary.summary || 'y',
+          url: summary.url || 'x',
+        }));
     }
 }
 
