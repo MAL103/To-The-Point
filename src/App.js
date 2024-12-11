@@ -15,14 +15,14 @@ const App = observer ( //JA: added the observer
                     "path": "/",
                     "element": <HomePagePresenter model={props.model}/>
                 },
-                /*{
+                {
                     "path": "/login",
                     "element": <LoginPresenter model={props.model}/>,
                 },
                 {
                     "path": "/home",
                     "element": <HomePagePresenter model={props.model}/>
-                },*/
+                },
             ]);
         }
 
