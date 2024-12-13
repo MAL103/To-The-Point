@@ -7,7 +7,7 @@ export function HistoryView(props) {
     return (<div class="sidebar">
         <h2>Article History</h2>
         <ul>
-            props.map(historyRowCB)
+            {props.exampleData.map(historyRowCB)}
         </ul>
     </div>);
 }
