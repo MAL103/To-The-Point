@@ -3,8 +3,8 @@ const model = {
     email:"",
     password:"",
     currentUserId:undefined,
-    searchURLs: [],
     currentSummaryId: null,
+    url: "",
     
     setEmail(email){
         this.email=email;
@@ -15,6 +15,10 @@ const model = {
     setCurrentUserId(userId){
             this.currentUserId = userId;
             //resolvePromise(getUserHistory(userId),this.currentUserPromiseState);
+    },
+
+    setUrl(url){
+        this.url=url;
     }
 }
 
