@@ -1,5 +1,5 @@
 const model = {
-    exampleData: "Hello World"
+    exampleData: ["Hello World"]
 }
 
 export {model}; // export the model
