@@ -8,7 +8,6 @@ const auth = getAuth(app);
 
 const db= getDatabase(app);
 const PATH = "Users";
-//const rf = ref(db, PATH);
 
 /*const dummyData = {
   userId: 'pPHl5aBwpeRSMkMUnkzDLBF1xch2',

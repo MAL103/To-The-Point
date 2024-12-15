@@ -1,15 +1,6 @@
 import "../style.css"
 
 export function HomePageView(props) {
-
-  function summariesRenderingACB(summary){
-    return (
-        <tr key={summary.url}>
-            <td >{summary.summary}</td>
-            <td >{summary.url}</td>
-        </tr>
-    );
-}
   return(
     <div>
       <div className="body">
@@ -24,12 +15,6 @@ export function HomePageView(props) {
             </svg>
           </button>
         </div>
-        <table>
-          <thead>Dummy data persisted from firebase</thead>
-          <tbody>
-            {(props.summaries).map(summariesRenderingACB)}
-          </tbody>
-        </table>
       </div>
     </div>
   )
