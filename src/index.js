@@ -3,13 +3,13 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import {observable} from "mobx";
+import {observable, reaction} from "mobx";
 import {model} from "./model/TTPModel";
 import { connectToFirebase } from './firebaseModel';
 
 // make model observable
 const reactiveModel = observable(model);
-connectToFirebase(reactiveModel);
+connectToFirebase(reactiveModel, reaction);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
