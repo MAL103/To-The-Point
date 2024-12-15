@@ -1,6 +1,4 @@
 import "../style.css"
-import { fetchUrlContent } from "../util/fetchUrlContent"
-import { summarizeContent } from "../util/summarizeContent";
 
 export function HomePageView(props) {
   return(
