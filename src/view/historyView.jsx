@@ -1,0 +1,13 @@
+import "../style.css"
+
+export function HistoryView(props) {
+    function historyRowCB(row){
+        return <li>Key Concept</li>
+    }
+    return (<div className="sidebar">
+        <h2>Article History</h2>
+        <ul>
+            {props.exampleData.map(historyRowCB)}
+        </ul>
+    </div>);
+}

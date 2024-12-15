@@ -1,3 +1,11 @@
+
+.sidebar {
+    width: 25%;
+    background-color: #0078d7; 
+    color: white;
+    padding: 20px;
+    box-sizing: border-box;
+}
 :root {
   --mainBlue: #04315a;
   --secondaryBlue: #8dadc2;
@@ -96,20 +104,23 @@
   border-radius: 8px;
   cursor: pointer;
   transition: background-color 0.2s ease;
-  margin-top: 15px;
-  margin-bottom: 35px;
+  margin-bottom: 15px;
 }
 
 .button:hover {
-  background-color: var(--darkBlue);
+  background-color: var(--grey);
 }
 
 .button:active {
-  background-color: var(--darkestBlue);
+  background-color: var(--grey);
 }
 
-button:hover, .loginInput:hover {
-  background-color: var(--darkestBlue);
+button:hover {
+  background-color: var(--grey);
+}
+
+.loginInput:hover {
+  background-color: var(--grey);
 }
 
 .button {
@@ -156,4 +167,37 @@ button:hover, .loginInput:hover {
 
 .search-button:active {
   background-color: var(--darkestBlue);
+}
+
+.loginButtonGroup {
+  display: flex;
+  flex-direction: column;
+  margin-top: 15px;
+  margin-bottom: 20px;
+}
+
+.titleButton {
+  all: unset;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.titleButton:hover {
+  all: unset;
+  cursor: pointer;
+}
+
+.navIcon {
+  width: 50px;
+  height: 50px;
+  fill: white;
+  background-color: transparent;
+  display: block;
+  border: none;
+}
+
+.navIcon:hover {
+  fill: var(--grey);
+  background-color: transparent;
+  cursor: pointer;
 }

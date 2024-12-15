@@ -1,5 +1,5 @@
 const model = {
-    exampleData: "This is example data",
+    exampleData: ["Hello World"],
     email:"",
     password:"",
     currentUserId:undefined,

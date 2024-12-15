@@ -23,20 +23,17 @@ export function LoginView(props) {
     <div>
       <div className="body">
       <h1 className="title">get to <span className="the">the</span> point</h1>
-        <h2>Please log in to continue</h2>
+        <h2>Please log in or sign up to continue</h2>
         <form className="login">
           <input onChange={handlerEmailACB} className="loginInput" type="text" id="username" label="username" placeholder="email"/>
           <input onChange={handlerPasswordACB} className="loginInput" type="password" id="password" label="password" placeholder="password"/>
-          <button onClick={onLoginClickACB} className="loginButton" type="submit" label="login">Login</button>
-          <button onClick={onSignupClickACB} className="loginButton" type="submit" label="login">Signup</button>
+          <div className="loginButtonGroup">
+            <button onClick={onLoginClickACB} className="loginButton" type="submit" label="login">Login</button>
+            <button onClick={onSignupClickACB} className="loginButton" type="submit" label="login">Signup</button>
+          </div>
         </form>
       </div>
     </div>
     
   )
 }
-
-/*function onLoginClickACB(){
-  // TO DO add login functionality here
-  window.location.hash="#/home";
-}*/
