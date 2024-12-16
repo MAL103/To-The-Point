@@ -1,10 +1,16 @@
 
 .sidebar {
     width: 30%;
-    background-color: rgb(202, 202, 202); 
+    background-color: white; 
     opacity: 90%;
     padding: 20px;
     box-sizing: border-box;
+    .historyTitle{
+      background-color: #8dadc2; 
+      border: 1px solid black;
+      padding: 10px;
+      margin: 0;
+    }
 
 }
 :root {
@@ -16,12 +22,7 @@
   --darkestBlue: #021628;
 }
 
-.historyTitle{
-  background-color: #8dadc2; 
-  border: 1px solid black;
-  padding: 10px;
-  margin-bottom: 10px;
-}
+
 
 .navigationBar {
   background-color: var(--mainBlue);
