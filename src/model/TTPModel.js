@@ -1,6 +1,6 @@
 import { fetchUrlContent } from "../util/fetchUrlContent";
 import { summarizeContent } from "../util/summarizeContent";
-import { resolvePromise } from "../resolvePromise";
+// import { resolvePromise } from "../resolvePromise";
 
 const model = {
     exampleData: ["Hello World"],
@@ -31,8 +31,10 @@ const model = {
     },
 
     doSummarize(url) {
-        resolvePromise(summarizeContent(fetchUrlContent(url)), this.currentSummaryPromiseState);
-        //resolvePromise(getUserHistory(userId),this.currentUserPromiseState);
+        // should resolve promise be coming into this
+        // resolvePromise(summarizeContent(fetchUrlContent(url)), this.currentSummaryPromiseState);
+        const content = fetchUrlContent(url);
+        content.then(summarizeContent).then((data)=>console.log(data));
     },
     setCurrentSummaryId(summaryId){
         this.currentSummaryId= summaryId;
