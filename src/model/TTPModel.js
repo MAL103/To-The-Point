@@ -3,7 +3,7 @@ import { summarizeContent } from "../util/summarizeContent";
 import { resolvePromise } from "../resolvePromise";
 
 const model = {
-    exampleData: "This is example data",
+    exampleData: ["Hello World"],
     email:"",
     password:"",
     currentUserId:undefined,
@@ -11,6 +11,8 @@ const model = {
     url: "",
     currentUserPromiseState: {},
     currentSummaryPromiseState: {},
+    currentSummaryId: 1,
+    summaries: [],
     
     setEmail(email){
         this.email=email;
@@ -29,6 +31,19 @@ const model = {
 
     doSummarize(url) {
         resolvePromise(summarizeContent(fetchUrlContent(url)), this.currentSummaryPromiseState);
+        this.currentUserId = userId;
+        //resolvePromise(getUserHistory(userId),this.currentUserPromiseState);
+    },
+    setCurrentSummaryId(summaryId){
+        this.currentSummaryId= summaryId;
+    },
+    setSummaries(summaries) {
+        this.summaries = summaries.map((summary) => ({
+          summary: summary.summary || 'y',
+          url: summary.url || 'x',
+          title: summary.title || 'x',
+          id: summary.id || 1
+        }));
     }
 }
 

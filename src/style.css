@@ -1,10 +1,17 @@
 
 .sidebar {
-    width: 25%;
-    background-color: #0078d7; 
-    color: white;
+    width: 30%;
+    background-color: white; 
+    opacity: 90%;
     padding: 20px;
     box-sizing: border-box;
+    .historyTitle{
+      background-color: #8dadc2; 
+      border: 1px solid black;
+      padding: 10px;
+      margin: 0;
+    }
+
 }
 :root {
   --mainBlue: #04315a;
@@ -14,6 +21,8 @@
   --darkBlue: #03223f;
   --darkestBlue: #021628;
 }
+
+
 
 .navigationBar {
   background-color: var(--mainBlue);
@@ -187,7 +196,7 @@ button:hover {
   cursor: pointer;
 }
 
-.profileIcon {
+.navIcon {
   width: 50px;
   height: 50px;
   fill: white;
@@ -196,8 +205,17 @@ button:hover {
   border: none;
 }
 
-.profileIcon:hover {
+.navIcon:hover {
   fill: var(--grey);
   background-color: transparent;
   cursor: pointer;
+}
+
+.summary{
+  width: 70%;
+  background-color: white; 
+  opacity: 90%;
+  padding: 20px;
+  box-sizing: border-box;
+
 }
