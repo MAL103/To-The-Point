@@ -7,4 +7,4 @@ const SummaryPresenter = observer(function SummaryPresenter(props){ // observer 
     return <SummaryView exampleData={props.model.exampleData} />
 })
 
-export {ExamplePresenter}; // export the presenter
+export {SummaryPresenter};

@@ -4,6 +4,7 @@ import { HomePagePresenter } from './presenter/homePagePresenter';
 import { LoginPresenter } from './presenter/loginPresenter';
 import { HistoryPresenter } from './presenter/historyPresenter';
 import { ProfileLogOutPresenter } from './presenter/profileLogOutPresenter';
+import { SummaryPresenter } from './presenter/summaryPresenter';
 import { observer } from "mobx-react-lite";
 import { NavigationBarPresenter } from './presenter/navigationBarPresenter';
 
@@ -11,7 +12,6 @@ import { NavigationBarPresenter } from './presenter/navigationBarPresenter';
 const App = observer ( //JA: added the observer
     function appRender(props){
         function makeRouter(props) {
-            // CM: i changed this from browser router to hash router so it was like the one we did in the lab. is that ok?
             return createHashRouter([
                 {
                     "path": "/",
@@ -32,6 +32,11 @@ const App = observer ( //JA: added the observer
                 {
                     "path": "/history",
                     "element": <HistoryPresenter model={props.model}/>
+                },
+                // TO DO: REMOVE AFTER TESTING
+                {
+                    "path": "/summary",
+                    "element": <SummaryPresenter model={props.model}/>
                 },
             ]);
         }
