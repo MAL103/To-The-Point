@@ -22,10 +22,10 @@ const model = {
     },
     setSummaries(summaries) {
         this.summaries = summaries.map((summary) => ({
-          summary: summary.summary || 'y',
-          url: summary.url || 'x',
-          title: summary.title || 'x',
-          id: summary.id || 1
+          summary: summary.summary || '',
+          url: summary.url || '',
+          title: summary.title || '',
+          id: summary.id || null
         }));
     }
 }
