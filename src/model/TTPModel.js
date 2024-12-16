@@ -1,5 +1,6 @@
-// import { fetchUrlContent } from "../util/fetchUrlContent";
-// import { summarizeContent } from "../util/summarizeContent";
+import { fetchUrlContent } from "../util/fetchUrlContent";
+import { summarizeContent } from "../util/summarizeContent";
+import { resolvePromise } from "../resolvePromise";
 
 const model = {
     exampleData: "This is example data",
@@ -27,7 +28,7 @@ const model = {
     },
 
     doSummarize(url) {
-        // resolvePromise(summarizeContent(fetchUrlContent(url)), this.currentSummaryPromiseState);
+        resolvePromise(summarizeContent(fetchUrlContent(url)), this.currentSummaryPromiseState);
     }
 }
 
