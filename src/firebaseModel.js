@@ -43,7 +43,6 @@ function persistenceToModel(dataFromPersistence, model){
 function saveToFirebase(model){
   if(model.ready && model.currentUserId){
     set(ref(db, PATH+`/${model.currentUserId}`), modelToPersistence(model));
-    //console.log('datos guardados correctamente')
   }
 }
 function readFromFirebase(model){
