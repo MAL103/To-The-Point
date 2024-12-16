@@ -25,7 +25,7 @@ const model = {
           summary: summary.summary || 'y',
           url: summary.url || 'x',
           title: summary.title || 'x',
-          id: summary.id || null
+          id: summary.id || 1
         }));
     }
 }
