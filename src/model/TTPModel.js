@@ -1,9 +1,16 @@
+import { fetchUrlContent } from "../util/fetchUrlContent";
+import { summarizeContent } from "../util/summarizeContent";
+import { resolvePromise } from "../resolvePromise";
+
 const model = {
     exampleData: ["Hello World"],
     email:"",
     password:"",
     currentUserId:undefined,
-    searchURLs: [],
+    currentSummaryId: null,
+    url: "",
+    currentUserPromiseState: {},
+    currentSummaryPromiseState: {},
     currentSummaryId: 1,
     summaries: [],
     
@@ -14,6 +21,16 @@ const model = {
         this.password=password;
     },
     setCurrentUserId(userId){
+            this.currentUserId = userId;
+            //resolvePromise(getUserHistory(userId),this.currentUserPromiseState);
+    },
+
+    setUrl(url){
+        this.url=url;
+    },
+
+    doSummarize(url) {
+        resolvePromise(summarizeContent(fetchUrlContent(url)), this.currentSummaryPromiseState);
         this.currentUserId = userId;
         //resolvePromise(getUserHistory(userId),this.currentUserPromiseState);
     },
