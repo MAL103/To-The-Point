@@ -3,9 +3,8 @@ import "../style.css"
 export function HistoryView(props) {
     function summariesRenderingACB(summary){
         return (
-            <tr key={summary.url}>
-                <td >{summary.summary}</td>
-                <td >{summary.url}</td>
+            <tr key={summary.id}>
+                <td >{summary.title}</td>
             </tr>
         );
     }

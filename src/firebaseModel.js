@@ -27,6 +27,8 @@ function modelToPersistence(model){
     summaries: model.summaries.map((summary) => ({
       url: summary.url,
       summary: summary.summary,
+      title: summary.title,
+      id: summary.id
     })),
   };
 }
