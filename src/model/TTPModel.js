@@ -7,7 +7,6 @@ const model = {
     email:"",
     password:"",
     currentUserId:undefined,
-    currentSummaryId: null,
     url: "",
     currentUserPromiseState: {},
     currentSummaryPromiseState: {},
