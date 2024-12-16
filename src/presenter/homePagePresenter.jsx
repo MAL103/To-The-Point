@@ -3,7 +3,6 @@ import {useState} from "react"
 import { fetchUrlContent } from "../util/fetchUrlContent"
 import {HomePageView} from "../view/homePageView.jsx";
 import {observer} from "mobx-react-lite";
-import {fetchUrlContent} from "../util/fetchUrlContent";
 import {summarizeContent} from "../util/summarizeContent";
 
 const HomePagePresenter = observer(function HomePagePresenter(props){

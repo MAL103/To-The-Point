@@ -13,6 +13,7 @@ const model = {
     currentSummaryPromiseState: {},
     currentSummaryId: 1,
     summaries: [],
+    UserId,
     
     setEmail(email){
         this.email=email;
