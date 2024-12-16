@@ -1,5 +1,4 @@
 // import { summarizeContent } from "../util/summarizeContent.js";
-import {useState} from "react"
 // import { fetchUrlContent } from "../util/fetchUrlContent"
 import {HomePageView} from "../view/homePageView.jsx";
 import {observer} from "mobx-react-lite";
