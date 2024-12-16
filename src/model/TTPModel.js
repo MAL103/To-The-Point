@@ -1,19 +1,18 @@
 import { fetchUrlContent } from "../util/fetchUrlContent";
 import { summarizeContent } from "../util/summarizeContent";
-import { resolvePromise } from "../resolvePromise";
+// import { resolvePromise } from "../resolvePromise";
 
 const model = {
     exampleData: ["Hello World"],
     email:"",
     password:"",
     currentUserId:undefined,
-    currentSummaryId: null,
     url: "",
     currentUserPromiseState: {},
     currentSummaryPromiseState: {},
     currentSummaryId: 1,
     summaries: [],
-    UserId,
+    userId: undefined,
     
     setEmail(email){
         this.email=email;
@@ -31,9 +30,10 @@ const model = {
     },
 
     doSummarize(url) {
-        resolvePromise(summarizeContent(fetchUrlContent(url)), this.currentSummaryPromiseState);
-        this.currentUserId = userId;
-        //resolvePromise(getUserHistory(userId),this.currentUserPromiseState);
+        // should resolve promise be coming into this
+        // resolvePromise(summarizeContent(fetchUrlContent(url)), this.currentSummaryPromiseState);
+        const content = fetchUrlContent(url);
+        content.then(summarizeContent).then((data)=>console.log(data));
     },
     setCurrentSummaryId(summaryId){
         this.currentSummaryId= summaryId;
