@@ -36,14 +36,14 @@ function modelToPersistence(model){
 function persistenceToModel(dataFromPersistence, model){
   model.setEmail(dataFromPersistence?.email || '');
   model.setCurrentUserId(dataFromPersistence?.userId || null);
-  model.setCurrentSummaryId(dataFromPersistence?.summaryId || 1);
+  model.setCurrentSummaryId(dataFromPersistence?.summaryId || null);
   model.setSummaries(dataFromPersistence?.summaries || []);
 }
 
 function saveToFirebase(model){
   if(model.ready && model.currentUserId){
     set(ref(db, PATH+`/${model.currentUserId}`), modelToPersistence(model));
-    console.log('datos guardados correctamente')
+    //console.log('datos guardados correctamente')
   }
 }
 function readFromFirebase(model){
