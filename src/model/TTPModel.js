@@ -13,7 +13,7 @@ const model = {
     currentSummaryPromiseState: {},
     currentSummaryId: 1,
     summaries: [],
-    UserId,
+    userId: undefined,
     
     setEmail(email){
         this.email=email;
@@ -32,7 +32,6 @@ const model = {
 
     doSummarize(url) {
         resolvePromise(summarizeContent(fetchUrlContent(url)), this.currentSummaryPromiseState);
-        this.currentUserId = userId;
         //resolvePromise(getUserHistory(userId),this.currentUserPromiseState);
     },
     setCurrentSummaryId(summaryId){
