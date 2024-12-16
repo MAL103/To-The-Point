@@ -20,10 +20,20 @@ async function summarizeContent(content) {
         const response = await fetch(configuration.requestUrl, options);
 
 
-        return response.json()
+        return response.json().then(fetchAIResponse);
     } catch (error) {
         throw new Error(`Failed to summarize content: ${error.message}`);
     }
+}
+
+function fetchAIResponse(data) {
+
+    if (data.choices && data.choices.length > 0) {
+        return data.choices[0].message.content;
+    }
+
+    throw new Error("Failed to summarize content: Invalid response from OpenAI API");
+
 }
 
 function makeOptions(body) {
