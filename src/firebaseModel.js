@@ -9,15 +9,6 @@ const auth = getAuth(app);
 const db= getDatabase(app);
 const PATH = "Users";
 
-/*const dummyData = {
-  userId: 'pPHl5aBwpeRSMkMUnkzDLBF1xch2',
-  currentSummaryId:1,
-  summaries: [
-    { url: "https://example.com/doc1", summary: "This is a summary of doc1", title: "title 1"},
-    { url: "https://example.com/doc2", summary: "This is a summary of doc2", title: "title 2"},
-  ],
-};*/
-
 
 function modelToPersistence(model){
   return {
@@ -75,8 +66,10 @@ function connectToFirebase(model, watchFunction){
     userSessionACB(user, model);
   })
 
-  function isChangeImportantACB(){
-    return [model.email, model.currentUserId, model.currentSummaryId, model.summaries];
+  function isChangeImportantACB(){ //if something in here changes, it triggers sideEffectACB saving the model to firebase
+    //used to have model.email & model.currentUserId, but because they changed when the user logged in,
+    //it first saved whatever was in the model from the previous user to firebase rather than reading first from firebase
+    return [model.currentSummaryId, model.summaries];
   }
 
   function sideEffectACB(){

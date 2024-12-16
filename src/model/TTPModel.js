@@ -10,7 +10,7 @@ const model = {
     url: "",
     currentUserPromiseState: {},
     currentSummaryPromiseState: {},
-    currentSummaryId: 1,
+    currentSummaryId: null,
     summaries: [],
     userId: undefined,
     
