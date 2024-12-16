@@ -1,3 +1,6 @@
+// import { fetchUrlContent } from "../util/fetchUrlContent";
+// import { summarizeContent } from "../util/summarizeContent";
+
 const model = {
     exampleData: "This is example data",
     email:"",
@@ -5,6 +8,8 @@ const model = {
     currentUserId:undefined,
     currentSummaryId: null,
     url: "",
+    currentUserPromiseState: {},
+    currentSummaryPromiseState: {},
     
     setEmail(email){
         this.email=email;
@@ -19,6 +24,10 @@ const model = {
 
     setUrl(url){
         this.url=url;
+    },
+
+    doSummarize(url) {
+        // resolvePromise(summarizeContent(fetchUrlContent(url)), this.currentSummaryPromiseState);
     }
 }
 

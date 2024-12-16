@@ -4,8 +4,6 @@ import { fetchUrlContent } from "../util/fetchUrlContent"
 import {HomePageView} from "../view/homePageView.jsx";
 import {observer} from "mobx-react-lite";
 
-
-
 const HomePagePresenter = observer(function HomePagePresenter(props){
     const [url, setUrl] = useState("");
 
@@ -14,12 +12,11 @@ const HomePagePresenter = observer(function HomePagePresenter(props){
         console.log(props.model.url);
     }
 
-    function summarizeContent(url) {
-        // should the model be coming into play here
-        summarizeContent(fetchUrlContent(url))
+    function summarizeClickACB() {
+        props.model.doSummarize(props.model.url)
     }
 
-    return <HomePageView setUrl={setModelUrl} summarizeContent={summarizeContent} exampleData={props.model.exampleData} />
+    return <HomePageView setUrl={setModelUrl} onSummarizeClick={summarizeClickACB} exampleData={props.model.exampleData} />
 })
 
 export {HomePagePresenter};
