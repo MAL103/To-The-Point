@@ -5,3 +5,5 @@ export const configuration = {
     dangerouslyAllowBrowser: true,
     reactAppAPIKey: process.env.REACT_APP_API_KEY,
 }
+
+console.log(configuration);
