@@ -24,6 +24,8 @@ const model = {
         this.summaries = summaries.map((summary) => ({
           summary: summary.summary || 'y',
           url: summary.url || 'x',
+          title: summary.title || 'x',
+          id: summary.id || null
         }));
     }
 }
