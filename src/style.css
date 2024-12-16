@@ -1,8 +1,8 @@
 
 .sidebar {
-    width: 25%;
-    background-color: #0078d7; 
-    color: white;
+    width: 30%;
+    background-color: white; 
+    opacity: 90%;
     padding: 20px;
     box-sizing: border-box;
 }
