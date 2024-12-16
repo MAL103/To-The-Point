@@ -9,9 +9,8 @@ export function HistoryView(props) {
             </tr>
         );
     }
-
     return (<div className="sidebar">
-        <h2>Article History</h2>
+        <h2 className = historyTitle >Article History</h2>
         <table>
           <tbody>
             {(props.summaries).map(summariesRenderingACB)}
