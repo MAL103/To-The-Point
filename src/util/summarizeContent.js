@@ -5,7 +5,7 @@ async function summarizeContent(content) {
     try {
         // Call OpenAI API to summarize the content
         const body = {
-            model: "gpt-4o-mini",
+            model: "llama-3.1-8b-instant",
             messages: [
                 { role: "system", content: "You are a helpful assistant that summarizes article content into concise markdown." },
                 { role: "user", content: `Please summarize the following content in markdown format:\n\n${content}` },
