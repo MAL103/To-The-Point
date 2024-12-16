@@ -1,21 +1,22 @@
 import "../style.css"
 
 export function HistoryView(props) {
-    /*function selectSummaryACB(){
-        props.onSummarySelect();
-    }*/
+
+    function selectSummaryACB(id){
+        props.onSummarySelect(id-1);
+    }
 
     function summariesRenderingACB(summary){
         return (
-            <tr key={summary.id}>
-                <td >{summary.title}</td>
+            <tr key={summary.url} >
+                <td onClick={() => selectSummaryACB(summary.id)}>{summary.title}</td>
             </tr>
         );
     }
     return (
     <div>
     <div className="sidebar">
-        <h2 className = "historyTitle">Article History {props.summaryId}</h2>
+        <h2 className = "historyTitle">Article History</h2>
         <table>
           <tbody>
             {(props.summaries).map(summariesRenderingACB)}
@@ -23,7 +24,7 @@ export function HistoryView(props) {
         </table>
     </div>
     <div>
-    {props.summaryId && props.summaries && props.summaries[props.summaryId] ? (
+    {props.summaryId !==null && props.summaries && props.summaries[props.summaryId] ? (
         <div>
             <h2>{props.summaries[props.summaryId].title}</h2>
             <p>{props.summaries[props.summaryId].summary}</p>

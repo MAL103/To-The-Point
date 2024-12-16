@@ -1,5 +1,3 @@
-import { promise } from "parse-git-config";
-
 export function resolvePromise(prms, promiseState){
   promiseState.promise= prms;
   promiseState.data= null;
