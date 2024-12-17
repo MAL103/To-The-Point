@@ -3,7 +3,7 @@ import "../style.css"
 export function HistoryView(props) {
 
     function selectSummaryACB(id){
-        props.onSummarySelect(id-1);
+        props.onSummarySelect(id);
     }
 
     function summariesRenderingACB(summary){

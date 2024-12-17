@@ -1,6 +1,6 @@
 import { fetchUrlContent } from "../util/fetchUrlContent";
 import { summarizeContent } from "../util/summarizeContent";
-// import { resolvePromise } from "../resolvePromise";
+import { resolvePromise } from "../resolvePromise";
 
 const model = {
     exampleData: ["Hello World"],
@@ -28,27 +28,30 @@ const model = {
     setUrl(url){
         this.url=url;
     },
+    addSummary(newSummary){
+        this.summaries = [...this.summaries, newSummary];
+    },
     doSummarize(url) {
-        // should resolve promise be coming into this
-        // resolvePromise(summarizeContent(fetchUrlContent(url)), this.currentSummaryPromiseState);
-        const content = fetchUrlContent(url);
-        content.then(summarizeContent).then((data)=> {
+        const content = fetchUrlContent(url)
+        .then(summarizeContent).then((data)=> {
             console.log(data);
-            //after getting the summary update summaries property with the new summary obj
+
             const nextId = this.summaries.length > 0 
             ? this.summaries[this.summaries.length - 1].id + 1 
-            : 1;
+            : 0;
+
             const newSummary = {
                 id: nextId,
                 title: 'a title',
                 summary: data,
                 url: url
             }
-            //this.summaries.push(newSummary);
-            this.summaries = [...this.summaries, newSummary];
+            this.addSummary(newSummary);
+            this.setCurrentSummaryId(newSummary.id)
             console.log('updated summaries', this.summaries)
+            return data;
         })
-        
+        return resolvePromise(content, this.currentSummaryPromiseState);
     },
     setCurrentSummaryId(summaryId){
         this.currentSummaryId= summaryId;
@@ -60,6 +63,9 @@ const model = {
           title: summary.title || '',
           id: summary.id || null
         }));
+    },
+    resetCurrentSummaryPromiseState() {
+        this.currentSummaryPromiseState = { promise: null, data: null, error: null };
     }
 }
 
