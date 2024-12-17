@@ -2,7 +2,7 @@ import './App.css';
 import {createHashRouter, RouterProvider} from "react-router-dom";
 import { HomePagePresenter } from './presenter/homePagePresenter';
 import { LoginPresenter } from './presenter/loginPresenter';
-import { HistorySummaryView } from './view/historySummaryView';
+import { HistorySummaryPresenter } from './presenter/historySummaryPresenter';
 import { ProfileLogOutPresenter } from './presenter/profileLogOutPresenter';
 import { observer } from "mobx-react-lite";
 import { NavigationBarPresenter } from './presenter/navigationBarPresenter';
@@ -31,7 +31,7 @@ const App = observer ( //JA: added the observer
                 },
                 {
                     "path": "/history",
-                    "element": <HistorySummaryView model={props.model}/>
+                    "element": <HistorySummaryPresenter model={props.model}/>
                 },
             ]);
         }
