@@ -17,27 +17,11 @@ const LoginPresenter = observer(function LoginPresenter(props){
       props.model.setPassword(pass);
   }
 
-  /*function authChangedACB(){
-    props.model.setCurrentUserId(undefined);
-    onAuthStateChanged(auth, (user) => {
-      if(user){
-        console.log('user logged in', user.email, user.uid);
-        props.model.setCurrentUserId(user.uid);
-        console.log('now the currentUserId is', props.model.currentUserId)
-      }
-      else{
-        console.log('error loggin in');
-        props.model.setCurrentUserId(null);
-      }
-    })
-  }*/
-
   function loginACB(){
     signInWithEmailAndPassword(auth, props.model.email, props.model.password)
       .then((userCredential) => {
         const user = userCredential.user;
         console.log('sign in success', user);
-        //authChangedACB()
       })
       .catch((error) => {
         console.log('error loggin in', error);
