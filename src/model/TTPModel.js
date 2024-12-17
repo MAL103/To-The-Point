@@ -38,16 +38,16 @@ const model = {
 
             const nextId = this.summaries.length > 0 
             ? this.summaries[this.summaries.length - 1].id + 1 
-            : 0;
+            : 1;
 
             const newSummary = {
                 id: nextId,
-                title: 'Summary '+ (nextId + 1).toString(),
+                title: 'Summary '+ (nextId).toString(),
                 summary: data,
                 url: url
             }
             this.addSummary(newSummary);
-            this.setCurrentSummaryId(newSummary.id)
+            this.setCurrentSummaryId(newSummary.id-1)
             console.log('updated summaries', this.summaries)
             return data;
         })
