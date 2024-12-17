@@ -18,7 +18,7 @@ const HomePagePresenter = observer(function HomePagePresenter(props){
         // content.then(summarizeContent).then((data)=>console.log(data));
     }
 
-    return <HomePageView setUrl={setModelUrl} onSummarizeClick={summarizeClickACB} exampleData={props.model.exampleData} />
+    return <HomePageView setUrl={setModelUrl} onSummarizeClick={summarizeClickACB} />
 })
 
 export {HomePagePresenter};

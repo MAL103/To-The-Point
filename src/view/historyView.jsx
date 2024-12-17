@@ -23,7 +23,7 @@ export function HistoryView(props) {
           </tbody>
         </table>
     </div>
-    <div>
+    {/*<div>
     {props.summaryId !==null && props.summaries && props.summaries[props.summaryId] ? (
         <div>
             <h2>{props.summaries[props.summaryId].title}</h2>
@@ -32,7 +32,7 @@ export function HistoryView(props) {
     ) : (
         <p>Select a summary</p>
     )}
-    </div>
+    </div>*/}
     </div>
     );
 }
