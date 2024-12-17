@@ -4,8 +4,12 @@ import {observer} from "mobx-react-lite";
 
 
 
-const HistorySummaryPresenter = observer(function HistorySummaryPresenter(props){ // observer is a HOC that makes the component reactive
-    return <HistorySummaryView exampleData={props.model.exampleData} />
+const HistorySummaryPresenter = observer(function HistorySummaryPresenter(props){ 
+    //unsure about this
+    function changeSummaryACB(id){
+        props.model.setCurrentSummaryId(id);
+    }
+    return <HistorySummaryView onSummarySelect={changeSummaryACB}/>
 })
 
 export {HistorySummaryPresenter}; // export the presenter
