@@ -28,13 +28,28 @@ const model = {
     setUrl(url){
         this.url=url;
     },
-
     doSummarize(url) {
         // should resolve promise be coming into this
         // resolvePromise(summarizeContent(fetchUrlContent(url)), this.currentSummaryPromiseState);
         const content = fetchUrlContent(url);
-        content.then(summarizeContent).then((data)=>console.log(data));
-    },
+        content.then(summarizeContent).then((data)=> {
+            console.log(data);
+            //after getting the summary update summaries property with the new summary obj
+            const nextId = this.summaries.length > 0 
+            ? this.summaries[this.summaries.length - 1].id + 1 
+            : 1;
+            const newSummary = {
+                id: nextId,
+                title: 'a title',
+                summary: data,
+                url: url
+            }
+            //this.summaries.push(newSummary);
+            this.summaries = [...this.summaries, newSummary];
+            console.log('updated summaries', this.summaries)
+        })
+        
+    },
     setCurrentSummaryId(summaryId){
         this.currentSummaryId= summaryId;
     },

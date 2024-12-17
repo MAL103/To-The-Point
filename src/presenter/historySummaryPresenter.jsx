@@ -13,7 +13,7 @@ const HistorySummaryPresenter = observer(function HistorySummaryPresenter(props)
     return (
         <div className="container">
             <HistoryView summaries={props.model.summaries} summaryId={props.model.currentSummaryId} onSummarySelect={changeSummaryACB}/>
-            <SummaryView model={props.model}/>
+            <SummaryView model={props.model} summaries={props.model.summaries} summaryId={props.model.currentSummaryId}/>
         </div>
     )
 })
