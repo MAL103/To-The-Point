@@ -1,8 +1,5 @@
 export function NavigationBar(props){
 
-  function logOutClickACB(){
-    props.onLogOut();
-  }
   return (
       <div className="navigationBar">
           <button className="titleButton" onClick={returnHomeACB}>
@@ -28,8 +25,6 @@ export function NavigationBar(props){
                   </g>
                 </svg>
               </button>
-              {/* potentially move this logout button to the profile page */}
-              <button onClick={logOutClickACB}>LOGOUT</button>
           </div>
           )}
       </div>

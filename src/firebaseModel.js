@@ -9,15 +9,6 @@ const auth = getAuth(app);
 const db= getDatabase(app);
 const PATH = "Users";
 
-/*const dummyData = {
-  userId: 'pPHl5aBwpeRSMkMUnkzDLBF1xch2',
-  currentSummaryId:1,
-  summaries: [
-    { url: "https://example.com/doc1", summary: "This is a summary of doc1", title: "title 1"},
-    { url: "https://example.com/doc2", summary: "This is a summary of doc2", title: "title 2"},
-  ],
-};*/
-
 
 function modelToPersistence(model){
   return {
@@ -43,7 +34,6 @@ function persistenceToModel(dataFromPersistence, model){
 function saveToFirebase(model){
   if(model.ready && model.currentUserId){
     set(ref(db, PATH+`/${model.currentUserId}`), modelToPersistence(model));
-    //console.log('datos guardados correctamente')
   }
 }
 function readFromFirebase(model){
@@ -52,7 +42,18 @@ function readFromFirebase(model){
   return get(ref(db, PATH+`/${model.currentUserId}`))
       .then(function convertACB(snapshot){
         console.log('data read from firebase', snapshot.val())
+        if(!snapshot.val()){  //if user is new and doesn't have data
+          const initialData = {
+            userId: model.currentUserId,
+            email: model.email,
+            summaryId:null //as this is null it isnt written on the firebase
+          }
+          set(ref(db, PATH+`/${model.currentUserId}`), initialData);  //set the initial data for the user
+        }
+        else{
           return persistenceToModel(snapshot.val(), model);
+        }
+        //return persistenceToModel(snapshot.val(), model);
       })
       .then(function setModelReadyACB(){
           model.ready=true;
@@ -64,6 +65,7 @@ function userSessionACB(user, model){
   if(user){
     console.log('user logged in', user.email, user.uid);
     model.setCurrentUserId(user.uid);
+    model.setEmail(user.email)
     readFromFirebase(model); //only read from firebase if there is a user session
   }
   else{
@@ -76,8 +78,10 @@ function connectToFirebase(model, watchFunction){
     userSessionACB(user, model);
   })
 
-  function isChangeImportantACB(){
-    return [model.email, model.currentUserId, model.currentSummaryId, model.summaries];
+  function isChangeImportantACB(){ //if something in here changes, it triggers sideEffectACB saving the model to firebase
+    //used to have model.email & model.currentUserId, but because they changed when the user logged in,
+    //it first saved whatever was in the model from the previous user to firebase rather than reading first from firebase
+    return [model.currentSummaryId, model.summaries];
   }
 
   function sideEffectACB(){
