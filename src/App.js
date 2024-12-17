@@ -6,7 +6,6 @@ import { HistorySummaryPresenter } from './presenter/historySummaryPresenter';
 import { ProfileLogOutPresenter } from './presenter/profileLogOutPresenter';
 import { observer } from "mobx-react-lite";
 import { NavigationBarPresenter } from './presenter/navigationBarPresenter';
-import { HistorySummaryPresenter } from './presenter/historySummaryPresenter';
 
 
 const App = observer ( //JA: added the observer
