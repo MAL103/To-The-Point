@@ -42,7 +42,7 @@ const model = {
 
             const newSummary = {
                 id: nextId,
-                title: 'a title',
+                title: 'Summary '+ (nextId + 1).toString(),
                 summary: data,
                 url: url
             }
