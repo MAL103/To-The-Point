@@ -1,18 +1,3 @@
-
-.sidebar {
-    width: 30%;
-    background-color: white; 
-    opacity: 90%;
-    padding: 20px;
-    box-sizing: border-box;
-    .historyTitle{
-      background-color: #8dadc2; 
-      border: 1px solid black;
-      padding: 10px;
-      margin-bottom: 10px;
-    }
-
-}
 :root {
   --mainBlue: #04315a;
   --secondaryBlue: #8dadc2;
@@ -35,7 +20,6 @@
   .navTitle {
     color: white;
     margin: 0;
-    /* CM: note to self: maybe change this padding */
     padding-left: 30px;
   }
 }
@@ -46,6 +30,7 @@
 
 .buttonGroup {
   display: flex;
+  margin-right: 30px;
 }
 
 .title {
@@ -247,4 +232,19 @@ button:hover {
   align-items: flex-start; 
   margin: 20px auto;
   max-width: 1200px;
+}
+
+.sidebar {
+  width: 30%;
+  background-color: white; 
+  opacity: 90%;
+  padding: 20px;
+  box-sizing: border-box;
+  .historyTitle{
+    background-color: #8dadc2; 
+    border: 1px solid black;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+
 }
