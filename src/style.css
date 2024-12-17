@@ -9,7 +9,7 @@
       background-color: #8dadc2; 
       border: 1px solid black;
       padding: 10px;
-      margin: 0;
+      margin-bottom: 10px;
     }
 
 }
@@ -218,4 +218,11 @@ button:hover {
   padding: 20px;
   box-sizing: border-box;
 
+}
+
+.container{
+  display: flex; 
+  align-items: flex-start; 
+  margin: 20px auto;
+  max-width: 1200px;
 }
