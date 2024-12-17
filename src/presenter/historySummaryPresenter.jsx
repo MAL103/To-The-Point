@@ -6,14 +6,17 @@ import {observer} from "mobx-react-lite";
 
 
 const HistorySummaryPresenter = observer(function HistorySummaryPresenter(props){ 
-    //unsure about this
     function changeSummaryACB(id){
         props.model.setCurrentSummaryId(id);
     }
     return (
-        <div className="container">
-            <HistoryView summaries={props.model.summaries} summaryId={props.model.currentSummaryId} onSummarySelect={changeSummaryACB}/>
-            <SummaryView model={props.model} summaries={props.model.summaries} summaryId={props.model.currentSummaryId}/>
+        <div className="sideBarSummarycontainer">
+            <div className="sidebar">
+                <HistoryView summaries={props.model.summaries} summaryId={props.model.currentSummaryId} onSummarySelect={changeSummaryACB}/>
+            </div>
+            <div className="summaryView">
+                <SummaryView model={props.model} summaries={props.model.summaries} summaryId={props.model.currentSummaryId}/>
+            </div>
         </div>
     )
 })
