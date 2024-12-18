@@ -7,6 +7,7 @@ export function SummaryView(props){
             {props.summaryId !==null && props.summaries && props.summaries[props.summaryId] ? (
             <div>
                 <Markdown>{props.summaries[props.summaryId].summary}</Markdown>
+                <button class="button"><a className="link" href={props.model.url}>Read Full Article</a></button>
             </div>
             ) : (
             <p>Select a summary</p>
