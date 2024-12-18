@@ -35,12 +35,12 @@ const HomePagePresenter = observer(function HomePagePresenter(props){
             }
         }
         else{   
-            //window.location.hash = "#/history";     //this part is giving me a warning but works
-            console.log('summary added')
+            window.location.hash = "#/history";     //this part is giving me a warning but works
+            //console.log('summary added')
             props.model.resetCurrentSummaryPromiseState();
-            return null;
+           // return null;
         }
-       //return null;
+       return null;
     }
 
     //return <HomePageView setUrl={setModelUrl} onSummarizeClick={summarizeClickACB} />
