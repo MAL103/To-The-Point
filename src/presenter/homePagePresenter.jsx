@@ -2,8 +2,18 @@
 // import { fetchUrlContent } from "../util/fetchUrlContent"
 import {HomePageView} from "../view/homePageView.jsx";
 import {observer} from "mobx-react-lite";
+//import { useEffect } from "react";
 
 const HomePagePresenter = observer(function HomePagePresenter(props){
+
+    /*useEffect((props) => {
+        if (props.model.currentSummaryPromiseState.data) {
+            // Navigate to history page
+            window.location.hash = "#/history";
+            props.model.resetCurrentSummaryPromiseState();
+        }
+    }, [props.model.currentSummaryPromiseState.data]); // Use optional chaining in dependency array*/
+
 
     function setModelUrl(url) {
         props.model.url=url;
@@ -25,10 +35,12 @@ const HomePagePresenter = observer(function HomePagePresenter(props){
             }
         }
         else{   
-            window.location.hash = "#/history";     //this part is giving me a warning but works
+            //window.location.hash = "#/history";     //this part is giving me a warning but works
+            console.log('summary added')
             props.model.resetCurrentSummaryPromiseState();
             return null;
         }
+       //return null;
     }
 
     //return <HomePageView setUrl={setModelUrl} onSummarizeClick={summarizeClickACB} />
