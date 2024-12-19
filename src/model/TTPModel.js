@@ -48,7 +48,6 @@ const model = {
             }
             this.addSummary(newSummary);
             this.setCurrentSummaryId(newSummary.id-1)
-            console.log('updated summaries', this.summaries)
             return data;
         })
         return resolvePromise(content, this.currentSummaryPromiseState);

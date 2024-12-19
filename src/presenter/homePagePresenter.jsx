@@ -7,13 +7,11 @@ const HomePagePresenter = observer(function HomePagePresenter(props){
     
     useEffect(() => {
         if (props.model.currentSummaryPromiseState.data) {
-            //navigate('/history');
-            console.log('here it is supposed to navigate to history')
             window.location.hash="#/history";
             props.model.resetCurrentSummaryPromiseState();
-            console.log('now the state is', props.model.currentSummaryPromiseState)
         }
-    }, [props.model.currentSummaryPromiseState.data]); //this has warning but i cannot solve them because that would modify the logic
+        // eslint-disable-next-line
+    }, [props.model.currentSummaryPromiseState.data]); //just ignored the warning bc it was right
 
     function setModelUrl(url) {
         props.model.url = url;
@@ -31,7 +29,13 @@ const HomePagePresenter = observer(function HomePagePresenter(props){
             } else if (!promiseStatus.error) {
                 return <img src="https://brfenergi.se/iprog/loading.gif" alt="loading" />;
             } else {
-                return <div>Error: {promiseStatus.error}</div>;
+                //return <div>Error: {promiseStatus.error}</div>;
+                const errorMessage =
+                promiseStatus.error instanceof Error
+                    ? promiseStatus.error.message
+                    : String(promiseStatus.error);
+                return <div>Error: {errorMessage}</div>;
+
             }
         }
         return null;
