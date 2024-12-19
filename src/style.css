@@ -30,7 +30,7 @@
 
 .buttonGroup {
   display: flex;
-  margin-right: 30px;
+  margin-right: 28px;
 }
 
 .title {
@@ -188,6 +188,7 @@ button:hover {
   background-color: transparent;
   display: block;
   border: none;
+  margin: 0px 2px;
 }
 
 .navIcon:hover {
