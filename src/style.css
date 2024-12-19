@@ -288,10 +288,27 @@ button:hover {
   font-size: 28px;
   font-weight: 700;
   color: #ffffff;
-  padding: 20px;
+  letter-spacing: 1px;
+}
+
+.historyHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   border-bottom: 2px solid rgba(255, 255, 255, 0.2);
   background-color: rgba(0, 0, 0, 0.2);
-  letter-spacing: 1px;
+  padding: 20px;
+}
+
+.newSummaryButton {
+  background-color: var(--mainBlue);
+  border: none;
+  color: white;
+  font-size: 14px;
+  padding: 10px 16px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
 }
 
 .historyViewContainer {
