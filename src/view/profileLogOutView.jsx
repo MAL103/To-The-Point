@@ -7,7 +7,7 @@ export function ProfileLogOutView(props){
         <div className="profileContainer">
             <h1>your profile</h1>
             <p className="profileInfo">Email: {props.email}</p>
-            <button className="loginButton" type="submit" onClick={logOutClickACB}>Log Out</button>
+            <button className="button" type="submit" onClick={logOutClickACB}>Log Out</button>
         </div>
     );
 }
