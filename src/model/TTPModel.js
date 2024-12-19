@@ -1,5 +1,5 @@
 import { fetchUrlContent } from "../util/fetchUrlContent";
-import { summarizeContent } from "../util/summarizeContent";
+import {readTitleFromSummary, summarizeContent} from "../util/summarizeContent";
 import { resolvePromise } from "../resolvePromise";
 
 const model = {
@@ -42,7 +42,7 @@ const model = {
 
             const newSummary = {
                 id: nextId,
-                title: 'Summary '+ (nextId).toString(),
+                title: readTitleFromSummary(data) ||  'Summary '+ (nextId).toString(),
                 summary: data,
                 url: url
             }
