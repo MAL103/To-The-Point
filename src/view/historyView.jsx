@@ -16,12 +16,20 @@ export function HistoryView(props) {
     }
     return (
     <div className="historyViewContainer">
-        <h2 className="historyTitle">history</h2>
+        <div className="historyHeader">
+            <h2 className="historyTitle">history</h2>
+            <button className="newSummaryButton" onClick={onNewSummaryACB}>New Summary</button>
+        </div>
+
         <table className="historyTable">
             <tbody>
-                {props.summaries.map(summariesRenderingACB)}
+            {props.summaries.map(summariesRenderingACB)}
             </tbody>
         </table>
     </div>
     );
+}
+
+function onNewSummaryACB(){
+    window.location.hash = "#/home";
 }
