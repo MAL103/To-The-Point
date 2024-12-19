@@ -29,7 +29,13 @@ const HomePagePresenter = observer(function HomePagePresenter(props){
             } else if (!promiseStatus.error) {
                 return <img src="https://brfenergi.se/iprog/loading.gif" alt="loading" />;
             } else {
-                return <div>Error: {promiseStatus.error}</div>;
+                //return <div>Error: {promiseStatus.error}</div>;
+                const errorMessage =
+                promiseStatus.error instanceof Error
+                    ? promiseStatus.error.message
+                    : String(promiseStatus.error);
+                return <div>Error: {errorMessage}</div>;
+
             }
         }
         return null;
