@@ -11,7 +11,8 @@ Firebase creation\
 Firebase authentication (login, signup, logout, verify user to show page content)\
 Login and Main View\
 Sample model (to be modified)\
-API call to the OpenAI to get the summary of an article
+API call to the OpenAI to get the summary of an article\
+History page which shows previous summaries\
 
 ## What we plan to do
 API calls\
@@ -35,6 +36,9 @@ will manage persistence (to be added)
 ### App
 router\
 conditional rendering depending on whether there is a currentUserId (active user session)
+
+## 3rd party component
+We have implemented the remarkjs react-markdown component, which renders the markdown we receive from the API into a user friendly format. This is seen on the history page and when a summary is generated.
 
 
 # Getting Started with Create React App
