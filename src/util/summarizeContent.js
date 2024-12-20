@@ -59,4 +59,15 @@ function makeOptions(body) {
     };
 }
 
-export { summarizeContent };
+function readTitleFromSummary(summary) {
+    // assume title is the first line of the summary - withouth the markdown
+    const lines = summary.split("\n");
+    if (lines.length > 0) {
+        // Remove eveyrthing that is not a letter or a number or a space or punctuation
+        return lines[0].replaceAll(/[^a-zA-Z0-9\s.,!?-]/g, "");
+    }
+
+    return undefined;
+}
+
+export { summarizeContent, readTitleFromSummary };
