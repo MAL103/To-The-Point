@@ -67,6 +67,14 @@
   max-width: 500px; 
 }
 
+.searchContainer:hover {
+  border-color: var(--mainBlue);
+}
+
+.searchContainer-error {
+  border-color: red;
+}
+
 .login {
   width: 200px;
   display: flex;
@@ -140,7 +148,7 @@
   outline: none;
   transition: border-color 0.2s ease, box-shadow 0.2s ease;
   flex: 1;
-  border-right: 1px solid #d1d5db; /* Slight divider between input and button */
+  border-right: 1px solid #d1d5db;
 
 }
 
@@ -151,6 +159,18 @@
 
 .inputBar:hover {
   border-color: #6b7280;
+}
+
+.inputBar-error {
+  background-color: #fff5f5;
+  box-shadow: 0 0 5px red;
+}
+
+
+.inputBar-error-text {
+  color: red;
+  font-size: 14px;
+  margin-top: 5px;
 }
 
 .search-button {
@@ -209,7 +229,7 @@
 
 .summary{
   width: 70%;
-  background-color: white; 
+  background-color: white;
   opacity: 90%;
   padding: 20px;
   box-sizing: border-box;
@@ -217,7 +237,7 @@
 
 .profileContainer {
   max-width: 400px;
-  margin: 100px auto; /* Center the box vertically and horizontally */
+  margin: 100px auto;
   background-color: #ffffff;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   border-radius: 12px;
