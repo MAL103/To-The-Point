@@ -22,23 +22,17 @@ const HomePagePresenter = observer(function HomePagePresenter(props){
         props.model.doSummarize(props.model.url);
     }
 
-    function summaryPromiseRendering(promiseStatus) {
-        if (!promiseStatus.data) {
-            if (!promiseStatus.promise) {
-                return null;
-            } else if (!promiseStatus.error) {
-                return <img src="https://brfenergi.se/iprog/loading.gif" alt="loading" />;
-            } else {
-                return <div>Error: {promiseStatus.error}</div>;
-            }
-        }
-        return null;
-    }
+    const promiseState = props.model.currentSummaryPromiseState;
+    const isLoading = !promiseState.data && !promiseState.error && promiseState.promise;
 
     return (
         <div>
-            <HomePageView setUrl={setModelUrl} onSummarizeClick={summarizeClickACB}/>
-            {summaryPromiseRendering(props.model.currentSummaryPromiseState)}
+            <HomePageView
+                setUrl={setModelUrl}
+                onSummarizeClick={summarizeClickACB}
+                error={promiseState.error}
+                loading={isLoading}
+            />;
         </div>
     );
 });

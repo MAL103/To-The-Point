@@ -67,6 +67,14 @@
   max-width: 500px; 
 }
 
+.searchContainer:hover {
+  border-color: var(--mainBlue);
+}
+
+.searchContainer-error {
+  border-color: red;
+}
+
 .login {
   width: 200px;
   display: flex;
@@ -140,6 +148,18 @@ button:hover {
 
 .inputBar:hover {
   border-color: #6b7280;
+}
+
+.inputBar-error {
+  background-color: #fff5f5; /* Light red background for error indication */
+  box-shadow: 0 0 5px red; /* Subtle red glow */
+}
+
+
+.inputBar-error-text {
+  color: red;
+  font-size: 14px;
+  margin-top: 5px;
 }
 
 .search-button {
