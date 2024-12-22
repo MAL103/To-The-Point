@@ -13,7 +13,8 @@ const model = {
     currentSummaryId: null,
     summaries: [],
     userId: undefined,
-    
+    errorMessage: "",
+
     setEmail(email){
         this.email=email;
     },
@@ -23,6 +24,10 @@ const model = {
     setCurrentUserId(userId){
             this.currentUserId = userId;
             //resolvePromise(getUserHistory(userId),this.currentUserPromiseState);
+    },
+
+    setCurrentErrorMessage(errorMessage){
+        this.errorMessage=errorMessage;
     },
 
     setUrl(url){

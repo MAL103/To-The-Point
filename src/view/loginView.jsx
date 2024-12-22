@@ -27,6 +27,7 @@ export function LoginView(props) {
         <form className="login">
           <input onChange={handlerEmailACB} className="loginInput" type="text" id="username" label="username" placeholder="email"/>
           <input onChange={handlerPasswordACB} className="loginInput" type="password" id="password" label="password" placeholder="password"/>
+          {props.errorMessage && <p className="errorMessage">{props.errorMessage}</p>}
           <div className="loginButtonGroup">
             <button onClick={onLoginClickACB} className="button" type="submit" label="login">Login</button>
             <button onClick={onSignupClickACB} className="button" type="submit" label="login">Signup</button>

@@ -98,7 +98,6 @@
   border-radius: 8px;
   cursor: pointer;
   transition: background-color 0.2s ease;
-  margin-bottom: 15px;
 
   .fullArticleButton {
     align-self:center;
@@ -178,7 +177,6 @@
 .loginButtonGroup {
   display: flex;
   flex-direction: column;
-  margin-top: 15px;
   margin-bottom: 20px;
 }
 
@@ -329,4 +327,10 @@
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.errorMessage {
+  color: red;
+  font-size: 12px;
+  margin-bottom: 0px;
 }

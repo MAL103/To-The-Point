@@ -10,6 +10,7 @@ const ProfileLogOutPresenter = observer(function ProfileLogOutPresenter(props){ 
         signOut(auth).then(()=>{
             console.log('sign out successful');
             props.model.setCurrentUserId(null);
+            props.model.setCurrentErrorMessage("");
         }).catch((error)=>{
             console.log('sign out error', error);
         })
