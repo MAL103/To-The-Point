@@ -24,7 +24,8 @@ const LoginPresenter = observer(function LoginPresenter(props){
         console.log('sign in success', user);
       })
       .catch((error) => {
-        console.log('error loggin in', error);
+        console.log('error logging in', error);
+        props.model.setCurrentErrorMessage(error.message);
       })
   }
 
@@ -35,18 +36,11 @@ const LoginPresenter = observer(function LoginPresenter(props){
       console.log('sign up success', user);
     })
     .catch((error) => {
-      console.log('error signin up', error);
+      console.log('error signing up', error);
+      props.model.setCurrentErrorMessage(error.message);
     })
   }
-
-  // TO DO - connect the model and put actual data in here
-  /*summarizeContent("here is some example content. Syrian Arab Republic, 2019. " +
-       "The Syrian Arab Republic is a country in Western Asia, bordering Lebanon, Turkey, Iraq, Jordan").then((data) => {
-           console.log(data);
-       }
-   );*/
-
-    return <LoginView onEmailChange={enterEmailACB} onPasswordChange={enterPasswordACB} onLogin={loginACB} onSignup={signupACB}/>
+    return <LoginView errorMessage={props.model.errorMessage} onEmailChange={enterEmailACB} onPasswordChange={enterPasswordACB} onLogin={loginACB} onSignup={signupACB}/>
 })
 
 export {LoginPresenter};
