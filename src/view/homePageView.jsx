@@ -47,7 +47,7 @@ export function HomePageView(props) {
                         strokeLinecap="round"
                         strokeLinejoin="round"
                         strokeWidth="2"
-                        d="M5 15l7-7 7 7"
+                        d="M9 5l7 7-7 7"
                     />
                   </svg>
                 </button>
@@ -62,5 +62,4 @@ export function HomePageView(props) {
         </div>
       </div>
   );
-
 }
