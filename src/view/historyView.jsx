@@ -23,7 +23,7 @@ export function HistoryView(props) {
 
         <table className="historyTable">
             <tbody>
-            {props.summaries.map(summariesRenderingACB)}
+            {[...props.summaries].reverse().map(summariesRenderingACB)}
             </tbody>
         </table>
     </div>

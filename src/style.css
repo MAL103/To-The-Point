@@ -11,7 +11,7 @@
 
 .navigationBar {
   background-color: var(--mainBlue);
-  height: 100px;
+  height: 10vh;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -166,6 +166,10 @@
   box-shadow: 0 0 5px red;
 }
 
+.homePageContainer {
+  display: flow-root;
+  height: 90vh;
+}
 
 .inputBar-error-text {
   color: red;
@@ -259,7 +263,7 @@
 
 .sideBarSummarycontainer {
   display: flex;
-  height: 100vh;
+  height: 90vh;
   margin: 0;
   padding: 0;
   overflow: hidden;

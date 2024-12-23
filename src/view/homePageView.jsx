@@ -7,7 +7,7 @@ export function HomePageView(props) {
   }
 
   return (
-      <div>
+      <div className="homePageContainer">
         <div className="body">
           <h1 className="title">
             get to <span className="the">the</span> point

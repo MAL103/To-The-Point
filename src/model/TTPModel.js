@@ -1,6 +1,6 @@
 import { fetchUrlContent } from "../util/fetchUrlContent";
 import {readTitleFromSummary, summarizeContent} from "../util/summarizeContent";
-import { resolvePromise } from "../resolvePromise";
+import { resolvePromise } from "../util/resolvePromise";
 
 const model = {
     exampleData: ["Hello World"],

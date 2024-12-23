@@ -26,14 +26,12 @@ const HomePagePresenter = observer(function HomePagePresenter(props){
     const isLoading = !promiseState.data && !promiseState.error && promiseState.promise;
 
     return (
-        <div>
-            <HomePageView
-                setUrl={setModelUrl}
-                onSummarizeClick={summarizeClickACB}
-                error={promiseState.error}
-                loading={isLoading}
-            />;
-        </div>
+        <HomePageView
+            setUrl={setModelUrl}
+            onSummarizeClick={summarizeClickACB}
+            error={promiseState.error}
+            loading={isLoading}
+        />
     );
 });
 
