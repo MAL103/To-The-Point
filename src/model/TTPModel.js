@@ -70,6 +70,9 @@ const model = {
     },
     resetCurrentSummaryPromiseState() {
         this.currentSummaryPromiseState = { promise: null, data: null, error: null };
+    },
+    resetSummaries(){
+        this.summaries=[]
     }
 }
 

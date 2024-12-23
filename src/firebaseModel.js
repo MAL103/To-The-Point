@@ -46,7 +46,8 @@ function readFromFirebase(model){
           const initialData = {
             userId: model.currentUserId,
             email: model.email,
-            summaryId:null //as this is null it isnt written on the firebase
+            summaryId:null, //as this is null it isnt written on the firebase
+            summaries: {}
           }
           set(ref(db, PATH+`/${model.currentUserId}`), initialData);  //set the initial data for the user
         }
