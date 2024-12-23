@@ -1,7 +1,7 @@
 import {LoginView} from "../view/loginView.jsx";
 import {observer} from "mobx-react-lite";
 import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword} from "firebase/auth";
-import { app } from "../firebaseModel.js";
+import { app } from "../model/firebaseModel.js";
 //import {summarizeContent} from "../util/summarizeContent";
 
 

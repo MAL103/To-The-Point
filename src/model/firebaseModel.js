@@ -1,5 +1,5 @@
 import { initializeApp } from "firebase/app";
-import { firebaseConfig } from "./firebaseConfig";
+import { firebaseConfig } from "../config/firebaseConfig";
 import { getAuth, onAuthStateChanged } from "firebase/auth";
 import { getDatabase, ref, set, get } from "firebase/database";
 //initialize firebase app

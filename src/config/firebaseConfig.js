@@ -1,6 +1,6 @@
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 //JA: left this just moved the apikey to an .env
-import { configuration } from "./config/openAIConfig"
+import { configuration } from "./openAIConfig"
 export const firebaseConfig = {
     apiKey: configuration.reactAppAPIKey,
     authDomain: "dh2642-to-the-point.firebaseapp.com",

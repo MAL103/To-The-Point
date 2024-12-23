@@ -5,7 +5,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import {observable, reaction} from "mobx";
 import {model} from "./model/TTPModel";
-import { connectToFirebase } from './firebaseModel';
+import { connectToFirebase } from './model/firebaseModel';
 
 // make model observable
 const reactiveModel = observable(model);
